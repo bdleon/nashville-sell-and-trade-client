@@ -3,6 +3,7 @@ import { ApplicationViews } from "./ApplicationViews";
 import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
 import { Route, Redirect} from "react-router-dom"
+import { NavBar } from "./nav/NavBar";
 
 
 export const NashSellAndTrade = ()=>{
@@ -16,7 +17,7 @@ export const NashSellAndTrade = ()=>{
             if (localStorage.getItem("nst_token")) {
                 return <>
                     <Route>
-                        
+                        <NavBar/>
                         <ApplicationViews />
                     </Route>
                 </>
