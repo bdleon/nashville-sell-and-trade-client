@@ -1,10 +1,12 @@
 import React from "react";
+import { Route } from "react-router";
 
 export const ApplicationViews = () =>{
     return(
         <>
-        <p>hi</p>
-        <h1>hi</h1>
+        <Route exact path="/">
+<h1>hi</h1>
+        </Route>
         </>
     )
 }
