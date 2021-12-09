@@ -10,25 +10,41 @@ export const ProductList = (props) => {
 
     const [categories, setCategories] = useState([])
     const [products, setProduct] = useState([])
+    const [checkedCategories, SetCheckedCategories] = useState([])
 
     useEffect(() => {
         getCategory().then(data => setCategories(data))
     }, [])
 
     useEffect(() => {
-        getProduct().then(data => setProduct(data))
-    }, [])
+        getProduct(checkedCategories).then(data => setProduct(data))
+    }, [checkedCategories])
+
+    const changeCategoryState = (domEvent) =>{
+        
+        const copyCheckedCategories = [...checkedCategories]
+        if(copyCheckedCategories.includes(domEvent.target.value)){
+            copyCheckedCategories.splice(copyCheckedCategories.indexOf(domEvent.target.value),1)
+
+        }
+        else{
+            copyCheckedCategories.push(domEvent.target.value)
+        }
+
+    
+        SetCheckedCategories(copyCheckedCategories)
+    }
 
     return (
         <>
             <Container>
                 <Row>
-                    <Col sm={3}>
+                    <Col sm={2}>
                         <div className='filter-container'>
                             {
                                 categories.map(category => {
                                     return<div className='filer-container-item'> <label>{category.label}
-                                        <input type="checkbox"></input>
+                                        <input value={category.id} name="categories"onChange={changeCategoryState}type="checkbox"></input>
                                     </label></div>
 
 
@@ -37,7 +53,7 @@ export const ProductList = (props) => {
                             }
                         </div>
                     </Col>
-                    <Col sm={9}>
+                    <Col sm={10}>
                         {
                             products.map(product => {
 
@@ -48,6 +64,7 @@ export const ProductList = (props) => {
                                         return <p>label:{category.label}</p>
                                     })}
                                     <p>price:{product.price}</p>
+                                    {/* <img src={product.image}></img> */}
 
 
                                 </div>
@@ -62,6 +79,9 @@ export const ProductList = (props) => {
         </>
     )
 }
+
+// This is code that i will save to remember what i had. will delete when push to github
+
 
 
 // <h2>Products</h2>

@@ -7,3 +7,7 @@ height: 40%;
 background-color: gray;
 
 }
+
+.product-results-item{
+    border: 3px black solid;
+}
