@@ -1,11 +1,13 @@
 import React from "react";
 import { Route } from "react-router";
+import { ProductList } from "./product/ProductList";
 
 export const ApplicationViews = () =>{
     return(
         <>
         <Route exact path="/">
-<h1>hi</h1>
+            <ProductList/>
+
         </Route>
         </>
     )

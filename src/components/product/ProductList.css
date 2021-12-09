@@ -1,0 +1,9 @@
+
+.filter-container{
+
+display: flex;
+flex-direction: column;
+height: 40%;
+background-color: gray;
+
+}
