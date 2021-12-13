@@ -1,4 +1,5 @@
 export const createProduct = (product) => {
+    debugger
     return fetch("http://localhost:8000/products", {
         method: "POST",
         headers: {

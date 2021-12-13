@@ -10,6 +10,12 @@ export const NavBar = () => {
                 <li className="navbar_item">
                     <Link className="nav-link" to="/">Home</Link>
                 </li>
+                <li className="navbar_item">
+                    <Link className="nav-link" to="/">My Products</Link>
+                </li>
+                <li className="navbar_item">
+                    <Link className="nav-link" to="/form">+ Products</Link>
+                </li>
                 {
                     (localStorage.getItem("nst_token") !== null) ?
                         <li className="nav-item">
