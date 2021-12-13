@@ -27,7 +27,8 @@ export const ProductForm = () => {
     }
 
     const check = (domEvent) => {
-        const copyCurrentProduct = [...currentProduct]
+        const copyCurrentProduct = {...currentProduct}
+        debugger
         if (document.getElementById("myCheck").checked === true) {
 
             copyCurrentProduct[domEvent.target.name] = true
@@ -44,7 +45,7 @@ export const ProductForm = () => {
     const changeCategoryState = (domEvent) => {
 
         const copyCurrentProduct = [...selectedCategories]
-        debugger
+        
         if(copyCurrentProduct.includes(domEvent.target.value)){
             copyCurrentProduct.splice(copyCurrentProduct.indexOf(domEvent.target.value),1)
 
