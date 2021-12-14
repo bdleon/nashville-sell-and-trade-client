@@ -28,7 +28,7 @@ export const ProductForm = () => {
 
     const check = (domEvent) => {
         const copyCurrentProduct = {...currentProduct}
-        debugger
+        
         if (document.getElementById("myCheck").checked === true) {
 
             copyCurrentProduct[domEvent.target.name] = true
@@ -151,7 +151,7 @@ export const ProductForm = () => {
                 </Form.Group>
                 <Button type="summit"
                     onClick={evt => {
-                        currentProduct.trade = false
+                        
                         evt.preventDefault()
                         const product = {
                             title: currentProduct.title,
