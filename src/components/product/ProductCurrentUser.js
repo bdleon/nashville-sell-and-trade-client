@@ -40,9 +40,9 @@ export const ProductCurrentUser = () => {
 
     }
 
-   
 
-    
+
+
     // let myButton = document.getElementsByName("mybtn");
     // myButton.addEventListener("click", productIdHandler);
 
@@ -85,8 +85,9 @@ export const ProductCurrentUser = () => {
 
                                         }
                                     }>delete</Button></td>
-                                <td><Button variant="primary" id={product.id} onClick={(evt) => {setModalShow(true); productIdHandler(evt)}} className="mybtn" >edit</Button></td>
+                                <td><Button variant="primary" id={product.id} onClick={(evt) => { setModalShow(true); productIdHandler(evt) }} className="mybtn" >edit</Button></td>
                                 <ProductEditModal
+                                    fetchProduct={userProductFetcher}
                                     productId={captureProductId}
                                     show={modalShow}
                                     onHide={() => setModalShow(false)}

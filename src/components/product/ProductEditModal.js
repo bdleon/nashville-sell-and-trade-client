@@ -20,7 +20,10 @@ export const ProductEditModal = (props) => {
     }
     
     useEffect(() => {
-        userProductFetcher()
+        if(props.show){
+
+            userProductFetcher()
+        }
     }, [productId])
     
     const buildObject = () => {
@@ -45,8 +48,8 @@ export const ProductEditModal = (props) => {
 
     const updateProduct = (event) => {
         event.preventDefault()
-        debugger
-        editProduct(product)
+        
+        editProduct(product).then((data) => props.fetchProduct())
 
     }
 
@@ -85,11 +88,11 @@ export const ProductEditModal = (props) => {
             </Modal.Body>
             <Modal.Footer>
                 <Button onClick={props.onHide}>Close</Button>
-                <Button onClick={(evt) => {
+                <Button onClick={(evt) => {{
 
-                    updateProduct(evt)
+                    updateProduct(evt); props.onHide()
 
-                }}>Summit</Button>
+                }}}>Summit</Button>
             </Modal.Footer>
         </Modal>
     );
