@@ -64,6 +64,7 @@ export const ProductList = (props) => {
                                         return <p>label:{category.label}</p>
                                     })}
                                     <p>price:{product.price}</p>
+                                    <button></button>
                                     {/* <img src={product.image}></img> */}
 
 
