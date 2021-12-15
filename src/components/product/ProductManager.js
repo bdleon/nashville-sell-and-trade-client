@@ -42,3 +42,24 @@ return fetch (`http://localhost:8000/products/${id}`,{
     }
 })
 }
+
+export const editProduct = (product) => {
+   
+    return fetch(`http://localhost:8000/products/${product.id}`,{
+        method:"PUT",
+        headers:{
+            "Authorization": `Token ${localStorage.getItem("nst_token")}`,
+            "Content-Type": "application/json"
+
+        },
+        body: JSON.stringify(product)
+    })
+}
+
+export const getSingleProduct = (id) =>{
+    return fetch(`http://localhost:8000/products/${id}`,{
+        headers: {
+            "Authorization": `Token ${localStorage.getItem("nst_token")}`,
+        }
+    }).then(response => response.json())
+    } 
