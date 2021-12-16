@@ -4,13 +4,16 @@ import { getProduct } from "./ProductManager";
 import "./ProductList.css"
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row'
+import Row from 'react-bootstrap/Row';
+import { Link, useParams } from "react-router-dom";
+
 
 export const ProductList = (props) => {
 
     const [categories, setCategories] = useState([])
     const [products, setProduct] = useState([])
     const [checkedCategories, SetCheckedCategories] = useState([])
+    
 
     useEffect(() => {
         getCategory().then(data => setCategories(data))
@@ -64,7 +67,7 @@ export const ProductList = (props) => {
                                         return <p>label:{category.label}</p>
                                     })}
                                     <p>price:{product.price}</p>
-                                    <button></button>
+                                    <Link to={`/product/${product.id}`}><button>more</button></Link>
                                     {/* <img src={product.image}></img> */}
 
 
