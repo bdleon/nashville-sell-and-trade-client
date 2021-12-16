@@ -49,8 +49,8 @@ export const ProductCurrentUser = () => {
     let userProductCount = 1
     return (
         <>
-            {/* <Container> */}
-            <Table striped bordered hover>
+            
+            <Table striped bordered hover responsive >
                 <thead>
                     <tr>
                         <th>#</th>
@@ -60,6 +60,8 @@ export const ProductCurrentUser = () => {
                         <th>Quantity</th>
                         <th>Trade</th>
                         <th>id</th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -104,7 +106,7 @@ export const ProductCurrentUser = () => {
                 </tbody>
             </Table>
 
-            {/* </Container> */}
+            
         </>
     )
 }
