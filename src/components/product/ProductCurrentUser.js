@@ -13,10 +13,7 @@ export const ProductCurrentUser = () => {
     const [modalShow, setModalShow] = React.useState(false);
     const [captureProductId, setCaptureProductId] = useState(0)
 
-    // useEffect(() => {
-    //     getUserProduct().then(data => setProduct(data))
-    // }, [])
-
+   
     const userProductFetcher = () => {
         getUserProduct().then(data => setProduct(data))
     }
@@ -25,11 +22,7 @@ export const ProductCurrentUser = () => {
         userProductFetcher()
     }, [])
 
-    // const productIdHandler = (domEvent) => {
-    //     let id = parseInt(domEvent.target.id)
-    //     setCaptureProductId(id)
-
-    // }
+   
 
     const productIdHandler = (domEvent) => {
 
@@ -43,8 +36,7 @@ export const ProductCurrentUser = () => {
 
 
 
-    // let myButton = document.getElementsByName("mybtn");
-    // myButton.addEventListener("click", productIdHandler);
+ 
 
     let userProductCount = 1
     return (
