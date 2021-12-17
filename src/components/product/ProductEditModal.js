@@ -26,20 +26,7 @@ export const ProductEditModal = (props) => {
         }
     }, [productId])
     
-    const buildObject = () => {
-        return {
-            
-            "title":product.title,
-            "description": product.description,
-            "trade": product.trade,
-            "price": product.price,
-            "image": product.image,
-            "quantity": product.quantity,
-            "categories": product.categories
-
-        }
-
-    }
+  
     const handleOnChange = (domEvent) => {
         const copyProduct = { ...product }
         copyProduct[domEvent.target.name] = domEvent.target.value
@@ -82,6 +69,38 @@ export const ProductEditModal = (props) => {
                         name="title"
                     />
 
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="">
+                    <Form.Label>Description</Form.Label>
+                    <Form.Control
+                        as="textarea"
+                        placeholder={product.description}
+                        value={product.description}
+                        onChange={(evt)=>{handleOnChange(evt)}}
+                        
+                        name="description"
+                    />
+
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="">
+                    <Form.Label>Price</Form.Label>
+                    <Form.Control
+                        min="0"
+                        type="number"
+                        placeholder={product.price}
+                        value={product.price}
+                        name="price"
+                        onChange={(evt)=>{handleOnChange(evt)}}/>
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="">
+                    <Form.Label>Quantity</Form.Label>
+                    <Form.Control
+                        min="0"
+                        type="number"
+                        placeholder={product.quantity}
+                        value={product.quantity}
+                        name="quantity"
+                        onChange={(evt)=>{handleOnChange(evt)}}/>
                 </Form.Group>
                 </Form>
 

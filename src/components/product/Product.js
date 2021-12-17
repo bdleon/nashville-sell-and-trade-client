@@ -43,11 +43,7 @@ export const Product = (props) => {
         setMessage(copyMessage)
     }
 
-    // const saveMessage = (event)=>{
-    //     event.preventDefault()
-    //     createMessage(message)
-
-    // }
+  
 
 
 

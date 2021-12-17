@@ -42,6 +42,11 @@ export const ProductList = (props) => {
         <>
             <Container>
                 <Row>
+                    <Col sm={10}>
+                        search
+                    </Col>
+                </Row>
+                <Row>
                     <Col sm={2}>
                         <div className='filter-container'>
                             {
@@ -84,45 +89,3 @@ export const ProductList = (props) => {
     )
 }
 
-// This is code that i will save to remember what i had. will delete when push to github
-
-
-
-// <h2>Products</h2>
-// < section className="container">
-//     <div className="container-categories">
-//         <div className='categories-checkbox'>
-//             {
-//                 categories.map(category => {
-//                     return <label>{category.label}
-//                         <input type="checkbox"></input></label>
-
-
-//                 })
-
-//             }
-//         </div>
-
-//     </div>
-//     <div className="product-container">
-//         <div className='product-results'>
-//             {
-//                 products.map(product => {
-
-//                     return <div className='product-results-item'>
-//                         <p>title:{product.title}</p>
-//                         <p>description:{product.description}</p>
-//                         {product.categories.map(category => {
-//                             return <p>label:{category.label}</p>
-//                         })}
-//                         <p>price:{product.price}</p>
-
-
-//                     </div>
-//                 })
-
-//             }
-//         </div>
-//     </div>
-
-// </section
