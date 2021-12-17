@@ -10,3 +10,14 @@ export const createMessage= (message) => {
     })
 
 }
+
+
+export const getMessages = ()=>{
+return fetch("http://localhost:8000/messages",{
+    headers:{
+        "Authorization": `Token ${localStorage.getItem("nst_token")}`,
+    }
+}).then(res => res.json())
+
+
+}
