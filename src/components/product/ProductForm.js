@@ -11,7 +11,9 @@ export const ProductForm = () => {
     const history = useHistory()
     const [categories, setCategories] = useState([])
     const [checked, setChecked] = useState(false)
-    const [currentProduct, setProduct] = useState({})
+    const [currentProduct, setProduct] = useState({
+        trade: false
+    })
     const [selectedCategories, setSelectedCategories] = useState([])
     // const [checkedCategories, SetCheckedCategories] = useState([])
 
