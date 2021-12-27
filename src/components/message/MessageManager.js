@@ -1,6 +1,6 @@
 export const createMessage= (message) => {
 
-    return fetch("http://localhost:8000/messages", {
+    return fetch("https://nashville-sell-and-trade.herokuapp.com/messages", {
         method: "POST",
         headers: {
             "Authorization": `Token ${localStorage.getItem("nst_token")}`,
@@ -13,7 +13,7 @@ export const createMessage= (message) => {
 
 
 export const getMessages = ()=>{
-return fetch("http://localhost:8000/messages",{
+return fetch("https://nashville-sell-and-trade.herokuapp.com/messages",{
     headers:{
         "Authorization": `Token ${localStorage.getItem("nst_token")}`,
     }

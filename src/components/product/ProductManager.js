@@ -1,6 +1,6 @@
 export const createProduct = (product) => {
 
-    return fetch("http://localhost:8000/products", {
+    return fetch("https://nashville-sell-and-trade.herokuapp.com/products", {
         method: "POST",
         headers: {
             "Authorization": `Token ${localStorage.getItem("nst_token")}`,
@@ -12,7 +12,7 @@ export const createProduct = (product) => {
 }
 export const getProduct = (categories) => {
 
-    let url = 'http://localhost:8000/products?'
+    let url = 'https://nashville-sell-and-trade.herokuapp.com/products?'
     for (let category of categories) {
         url += `category=${category}&`
     }
@@ -26,7 +26,7 @@ export const getProduct = (categories) => {
 }
 
 export const getUserProduct = () => {
-    return fetch(`http://localhost:8000/products/my_products`, {
+    return fetch(`https://nashville-sell-and-trade.herokuapp.com/products/my_products`, {
         headers: {
             "Authorization": `Token ${localStorage.getItem("nst_token")}`,
         }
@@ -35,7 +35,7 @@ export const getUserProduct = () => {
 
 export const deleteProduct = (id) => {
 
-    return fetch(`http://localhost:8000/products/${id}`, {
+    return fetch(`https://nashville-sell-and-trade.herokuapp.com/products/${id}`, {
         method: "DELETE",
         headers: {
             "Authorization": `Token ${localStorage.getItem("nst_token")}`
@@ -45,7 +45,7 @@ export const deleteProduct = (id) => {
 
 export const editProduct = (product) => {
 
-    return fetch(`http://localhost:8000/products/${product.id}`, {
+    return fetch(`https://nashville-sell-and-trade.herokuapp.com/products/${product.id}`, {
         method: "PUT",
         headers: {
             "Authorization": `Token ${localStorage.getItem("nst_token")}`,
@@ -57,7 +57,7 @@ export const editProduct = (product) => {
 }
 
 export const getSingleProduct = (id) => {
-    return fetch(`http://localhost:8000/products/${id}`, {
+    return fetch(`https://nashville-sell-and-trade.herokuapp.com/products/${id}`, {
         headers: {
             "Authorization": `Token ${localStorage.getItem("nst_token")}`,
         }

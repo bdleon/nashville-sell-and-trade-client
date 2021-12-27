@@ -1,5 +1,5 @@
 export const getCategory = () => {
-    return fetch("http://localhost:8000/categories", {
+    return fetch("https://nashville-sell-and-trade.herokuapp.com/categories", {
 
         headers: {
             "Authorization": `Token ${localStorage.getItem("nst_token")}`,
