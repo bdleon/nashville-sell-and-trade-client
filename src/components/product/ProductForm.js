@@ -11,9 +11,7 @@ export const ProductForm = () => {
     const history = useHistory()
     const [categories, setCategories] = useState([])
     const [checked, setChecked] = useState(false)
-    const [currentProduct, setProduct] = useState({
-        trade: false
-    })
+    const [currentProduct, setProduct] = useState({})
     const [selectedCategories, setSelectedCategories] = useState([])
     // const [checkedCategories, SetCheckedCategories] = useState([])
 
@@ -154,7 +152,9 @@ export const ProductForm = () => {
                 <Button type="summit"
                     onClick={evt => {
                         let copy = {...currentProduct}
-                        "trade" in copy ? null: copy.trade = false
+                        if(!('trade' in copy) ) {
+                            copy.trade = false
+                        }
 
                         evt.preventDefault()
                         const product = {
