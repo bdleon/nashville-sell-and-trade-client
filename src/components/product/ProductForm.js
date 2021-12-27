@@ -153,15 +153,17 @@ export const ProductForm = () => {
                 </Form.Group>
                 <Button type="summit"
                     onClick={evt => {
-                        
+                        let copy = {...currentProduct}
+                        copy.hasOwnProperty('trade') ? null: copy.trade = false
+
                         evt.preventDefault()
                         const product = {
-                            title: currentProduct.title,
-                            description: currentProduct.description,
-                            trade: currentProduct.trade,
-                            price: parseInt(currentProduct.price),
-                            image: currentProduct.image,
-                            quantity: parseInt(currentProduct.quantity),
+                            title: copy.title,
+                            description: copy.description,
+                            trade: copy.trade,
+                            price: parseInt(copy.price),
+                            image: copy.image,
+                            quantity: parseInt(copy.quantity),
                             categories: selectedCategories
                         }
                         createProduct(product)
