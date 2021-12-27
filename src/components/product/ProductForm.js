@@ -154,7 +154,7 @@ export const ProductForm = () => {
                 <Button type="summit"
                     onClick={evt => {
                         let copy = {...currentProduct}
-                        copy.hasOwnProperty('trade') ? null: copy.trade = false
+                        "trade" in copy ? null: copy.trade = false
 
                         evt.preventDefault()
                         const product = {
