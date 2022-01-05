@@ -13,7 +13,7 @@ export const ProductList = (props) => {
     const [categories, setCategories] = useState([])
     const [products, setProduct] = useState([])
     const [checkedCategories, SetCheckedCategories] = useState([])
-    
+
 
     useEffect(() => {
         getCategory().then(data => setCategories(data))
@@ -23,36 +23,32 @@ export const ProductList = (props) => {
         getProduct(checkedCategories).then(data => setProduct(data))
     }, [checkedCategories])
 
-    const changeCategoryState = (domEvent) =>{
-        
+    const changeCategoryState = (domEvent) => {
+
         const copyCheckedCategories = [...checkedCategories]
-        if(copyCheckedCategories.includes(domEvent.target.value)){
-            copyCheckedCategories.splice(copyCheckedCategories.indexOf(domEvent.target.value),1)
+        if (copyCheckedCategories.includes(domEvent.target.value)) {
+            copyCheckedCategories.splice(copyCheckedCategories.indexOf(domEvent.target.value), 1)
 
         }
-        else{
+        else {
             copyCheckedCategories.push(domEvent.target.value)
         }
 
-    
+
         SetCheckedCategories(copyCheckedCategories)
     }
 
     return (
         <>
             <Container>
-                <Row>
-                    <Col sm={10}>
-                        search
-                    </Col>
-                </Row>
+
                 <Row>
                     <Col sm={2}>
                         <div className='filter-container'>
                             {
                                 categories.map(category => {
-                                    return<div className='filer-container-item'> <label>{category.label}
-                                        <input value={category.id} name="categories"onChange={changeCategoryState}type="checkbox"></input>
+                                    return <div className='filer-container-item'> <label>{category.label}
+                                        <input value={category.id} name="categories" onChange={changeCategoryState} type="checkbox"></input>
                                     </label></div>
 
 
