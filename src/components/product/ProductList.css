@@ -1,11 +1,10 @@
 
 .filter-container{
-
 display: flex;
-flex-direction: column;
-height: 40%;
 background-color: gray;
-
+height: 200px;
+border-radius: 2%;
+flex-direction: column;
 }
 
 .product-results-item{
@@ -16,4 +15,26 @@ background-color: gray;
     width: 100%
 }
 
+.filer-container-item{
+    margin-left: 10%;
+    margin-top: 10%;
 
+    
+}
+
+.post{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: space-around;
+}
+.post-card{
+    margin-bottom: 1rem;
+}
+.labels{
+    display: flex;
+    flex-wrap: wrap;
+}
+.label{
+    margin-right: .5rem;
+}
