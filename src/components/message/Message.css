@@ -1,3 +1,6 @@
 .message-container{
     border: 2px solid black;
 }
+.card{
+    margin-bottom: 2rem;
+}
