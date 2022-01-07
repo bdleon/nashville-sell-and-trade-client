@@ -32,7 +32,6 @@ export const MessageList = () => {
                         {
                             messages.length !== 0 ? <>
                                 {messages?.map(message => {
-
                                     return <Card className="card" key={`message--${message.id}`}>
                                         <Card.Header>Product: {message.product.title}</Card.Header>
                                         <Card.Body>
