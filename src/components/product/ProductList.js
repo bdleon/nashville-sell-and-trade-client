@@ -74,7 +74,7 @@ export const ProductList = (props) => {
                                             {<div className="labels">{product.categories.map(category => {
                                                 return <Card.Text className="label">{category.label}</Card.Text>
                                             })}</div>}
-                                            <Link to={`/product/${product.id}`}><Button variant="primary">Click for detail</Button></Link>
+                                            <Link to={`/product/${product.id}`}><Button variant="primary">Click for details</Button></Link>
                                         </Card.Body>
                                     </Card>
                                     </div>
