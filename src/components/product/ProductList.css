@@ -1,11 +1,10 @@
 
 .filter-container{
-
 display: flex;
-flex-direction: column;
-height: 40%;
 background-color: gray;
-
+height: 200px;
+border-radius: 2%;
+flex-direction: column;
 }
 
 .product-results-item{
@@ -14,6 +13,39 @@ background-color: gray;
 
 .modal-90w{
     width: 100%
+}
+
+.filer-container-item{
+    margin-left: 10%;
+    margin-top: 10%;
+
+    
+}
+
+.post{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: space-around;
+}
+.post-card{
+    margin-bottom: 1rem;
+}
+.labels{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: .8rem;
+}
+.label {
+    margin-right: .5rem;
+    border: 1px #34568B solid;
+    border-radius: 9%;
+    color: white;
+    font-size: 13px;
+    background-color:#34568B;
+    font-weight: 1px;
+    padding: 3px;
+    margin-bottom: 0;
 }
 
 
