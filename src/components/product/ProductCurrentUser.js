@@ -41,7 +41,8 @@ export const ProductCurrentUser = () => {
     let userProductCount = 1
     return (
         <>
-            
+            <Container>
+                <h2>Listed Items</h2>
             <Table striped bordered hover responsive >
                 <thead>
                     <tr>
@@ -97,6 +98,7 @@ export const ProductCurrentUser = () => {
 
                 </tbody>
             </Table>
+            </Container>
 
             
         </>
