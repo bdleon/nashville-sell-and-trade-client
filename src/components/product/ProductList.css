@@ -34,7 +34,18 @@ flex-direction: column;
 .labels{
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: .8rem;
 }
-.label{
+.label {
     margin-right: .5rem;
+    border: 1px #34568B solid;
+    border-radius: 9%;
+    color: white;
+    font-size: 13px;
+    background-color:#34568B;
+    font-weight: 1px;
+    padding: 3px;
+    margin-bottom: 0;
 }
+
+

@@ -63,38 +63,26 @@ export const ProductList = (props) => {
                     <Col sm={9}>
                         <h2>Posted Items</h2>
                         <div className="post">
-                        {
-                            products.map(product => {
+                            {
+                                products.map(product => {
 
-                                return <div key={`product--${product.id}`} className="post-card"> <Card style={{ width: '18rem' }}>
-                                    <Card.Img variant="top" src={product.image} alt="posted item" />
-                                    <Card.Body>
-                                        <Card.Title>{product.title}</Card.Title>
-                                        <Card.Text>{product.description}</Card.Text>
-                                        {<div className="labels">{product.categories.map(category => {
-                                            return <Card.Text className="label">label:{category.label}</Card.Text>
-                                        })}</div>}
-                                        <Button variant="primary">Go somewhere</Button>
-                                    </Card.Body>
-                                </Card>
-                                </div>
-
-
-                                // return <div className='product-results-item'>
-                                //     <p>title:{product.title}</p>
-                                //     <p>description:{product.description}</p>
-                                //     {product.categories.map(category => {
-                                //         return <p>label:{category.label}</p>
-                                //     })}
-                                //     <p>price:{product.price}</p>
-                                //     <Link to={`/product/${product.id}`}><button>more</button></Link>
-                                //     {/* <img src={product.image}></img> */}
+                                    return <div key={`product--${product.id}`} className="post-card"> <Card style={{ width: '18rem' }}>
+                                        <Card.Img variant="top" src={product.image} alt="posted item" />
+                                        <Card.Body>
+                                            <Card.Title>{product.title}</Card.Title>
+                                            <Card.Text>{product.description}</Card.Text>
+                                            {<div className="labels">{product.categories.map(category => {
+                                                return <Card.Text className="label">{category.label}</Card.Text>
+                                            })}</div>}
+                                            <Link to={`/product/${product.id}`}><Button variant="primary">Click for detail</Button></Link>
+                                        </Card.Body>
+                                    </Card>
+                                    </div>
 
 
-                                // </div>
-                            })
+                                })
 
-                        }
+                            }
                         </div>
 
                     </Col>
@@ -105,16 +93,5 @@ export const ProductList = (props) => {
     )
 }
 
-{/* <div className='product-results-item'>
-                                    <p>title:{product.title}</p>
-                                    <p>description:{product.description}</p>
-                                    {product.categories.map(category => {
-                                        return <p>label:{category.label}</p>
-                                    })}
-                                    <p>price:{product.price}</p>
-                                    <Link to={`/product/${product.id}`}><button>more</button></Link>
-                                    {/* <img src={product.image}></img> */}
 
-
-                                // </div> */}
 
