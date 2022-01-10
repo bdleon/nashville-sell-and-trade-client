@@ -14,10 +14,7 @@ export const NavBar = () => {
             <Navbar bg="light" variant="light" expand="lg" >
                 <Container>
                     <Navbar.Brand href="/">
-                        <img
-                            src="Nashville S-2-2.png"
-                            width="100"
-                            height="100" />
+                        <img src="/Nashville S-2-2.png" className="logo"></img>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="navbarScroll">
