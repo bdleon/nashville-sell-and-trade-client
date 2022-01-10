@@ -15,7 +15,7 @@ export const NavBar = () => {
                 <Container>
                     <Navbar.Brand href="/">
                         <img
-                            src="./Nashville S-2-2.png"
+                            src="Nashville S-2-2.png"
                             width="100"
                             height="100" />
                     </Navbar.Brand>
