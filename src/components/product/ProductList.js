@@ -63,7 +63,7 @@ export const ProductList = (props) => {
 
                     </Col>
                     <Col sm={9}>
-                        <h2>Posted Items</h2>
+                        <h2 className="posted-title">Posted Items</h2>
                         <div className="post">
                             {
                                 products.map(product => {
