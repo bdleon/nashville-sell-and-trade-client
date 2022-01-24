@@ -42,11 +42,12 @@ export const ProductList = (props) => {
 
     return (
         <>
-            <Container>
+            <Container className="home-productList">
 
                 <Row>
                     <Col sm={3}>
                         <h2>Categories</h2>
+
                         <div className='filter-container'>
                             {
                                 categories.map(category => {
@@ -59,6 +60,7 @@ export const ProductList = (props) => {
 
                             }
                         </div>
+
                     </Col>
                     <Col sm={9}>
                         <h2>Posted Items</h2>

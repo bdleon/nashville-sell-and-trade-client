@@ -72,6 +72,7 @@ export const ProductForm = () => {
                         value={currentProduct.title}
                         onChange={changeCurrentForm}
                         name="title"
+                        required
                     />
 
                 </Form.Group>
@@ -83,7 +84,8 @@ export const ProductForm = () => {
                         placeholder="Enter Description"
                         value={currentProduct.description}
                         name="description"
-                        onChange={changeCurrentForm} />
+                        onChange={changeCurrentForm} 
+                        required/>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="">
                     <Form.Label>Price</Form.Label>
@@ -93,7 +95,8 @@ export const ProductForm = () => {
                         placeholder="Enter Price"
                         value={currentProduct.price}
                         name="price"
-                        onChange={changeCurrentForm} />
+                        onChange={changeCurrentForm}
+                        required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="">
                     <Form.Label>Image Link</Form.Label>
@@ -102,7 +105,8 @@ export const ProductForm = () => {
                         placeholder="Enter image URL"
                         value={currentProduct.image}
                         name="image"
-                        onChange={changeCurrentForm} />
+                        onChange={changeCurrentForm} 
+                        required/>
 
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="">
@@ -113,7 +117,8 @@ export const ProductForm = () => {
                         placeholder="Enter quantity"
                         value={currentProduct.quantity}
                         name="quantity"
-                        onChange={changeCurrentForm} />
+                        onChange={changeCurrentForm} 
+                        required/>
 
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="">
